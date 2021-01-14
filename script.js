@@ -7,9 +7,18 @@
 $(".saveBtn").on("click", saveEvent);
 */
 // Lists the cities, state, and/or zipcode from local storage.
+var search = $("#search");
+var searchBtn = $("#button");
+
+searchBtn.on("click", function(event){
+
 for(var i = 0; i < localStorage.length; i++){
-    var getItem = $("").addClass("");
-    locName.append("<li>"+ Item + "</li>");
+    var cityN = localStorage.getItem(i);
+    var locName = $("#cityList").addClass("cityL");
+    locName.append("<li>"+ cityName + "</li>");
 }
 
-var localS =localStorage.setItem();
+
+});
+
+/*var localS =localStorage.setItem();*/
