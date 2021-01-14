@@ -7,7 +7,7 @@
 $(".saveBtn").on("click", saveEvent);
 */
 // Lists the cities, state, and/or zipcode from local storage.
-var search = $("#search");
+var search = $("#searchCity");
 var searchBtn = $("#button");
 
 searchBtn.on("click", function(event){
@@ -15,12 +15,12 @@ searchBtn.on("click", function(event){
 for(var i = 0; i < localStorage.length; i++){
     var cityN = localStorage.getItem(i);
     var locName = $("#cityList").addClass("cityL");
-    locName.append("<li>"+ cityName + "</li>");
+    locName.append("<li>"+ cityN + "</li>");
 }
 
 //https://api.covidtracking.com/v1/us/current.json
 // covid tracking
-var state = $("#search").val();
+var state = $("#searchState").val();
   var stateFormatted = state.replaceAll(" ", "").toLowerCase();
   var queryURL5day = "https://api.covidtracking.com/v1/states/" + stateFormatted + "/current.json"
 
@@ -37,7 +37,6 @@ var state = $("#search").val();
         console.log(response.death);
         console.log(response.deathIncrease);
       });
-
 
 });
 
