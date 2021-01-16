@@ -16,7 +16,13 @@ var searchBtn = $("#button");
 
 searchBtn.on("click", function(event){
 
-
+    var citInput = $("#search").val();
+    var data = JSON.parse(localStorage.getItem("cities")) || [];
+    data.push(citInput);
+    localStorage.setItem("cities", JSON.stringify(data));
+    weatherData(citInput);
+    $("#search").val("");
+    
  
 function displayCity(){
     $("#cityList").empty();
@@ -45,31 +51,28 @@ var state = $("#searchState").val();
   $.ajax({
       url: queryURL5day,
       method: "GET"
-  })
-      // We store all of the retrieved data inside of an object called "response"
-      .then(function(response) {
+  }).then(function(response) {
         console.log(response)
         console.log(response.positiveIncrease);
         console.log(response.positiveCasesViral);
         console.log(response.hospitalizedCurrently);
         console.log(response.death);
         console.log(response.deathIncrease);
-      });
+     
+    
+    
+    
+    });
 
 
 
 
-var citInput = $("#search").val();
-var data = JSON.parse(localStorage.getItem("cities")) || [];
-data.push(citInput);
-localStorage.setItem("cities", JSON.stringify(data));
-weatherData(citInput);
-$("#search").val("");
 
-});
+};
+};
 
 
 });
 
 /*var localS =localStorage.setItem();*/
-
+});
