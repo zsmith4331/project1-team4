@@ -16,6 +16,7 @@ body {
 header {
   margin: 0 0 0 200px;
 }
+
 .cityDiv {
 background-color: cadetblue;
 height: 500px;
@@ -24,11 +25,11 @@ position: relative;
 margin: 0 0 0 200px;
 border: 1px solid black;
 border-radius: 5%;
+}
 
 h3{
   margin-top: 40px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
 }
 
 #searchCity {

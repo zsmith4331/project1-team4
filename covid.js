@@ -1,7 +1,6 @@
 // covid tracking
 function covidFill(){
 
-
 var state = $("#searchState").val();
   var stateFormatted = state.replaceAll(" ", "").toLowerCase();
   var queryURL5day = "https://api.covidtracking.com/v1/states/" + stateFormatted + "/current.json"
