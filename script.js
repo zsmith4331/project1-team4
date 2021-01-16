@@ -42,35 +42,11 @@ for(var i = 0; i < data.length; i++){
     locName.append("<li>"+ cityN + "</li>");
 }
 
-//https://api.covidtracking.com/v1/us/current.json
-// covid tracking
-var state = $("#searchState").val();
-  var stateFormatted = state.replaceAll(" ", "").toLowerCase();
-  var queryURL5day = "https://api.covidtracking.com/v1/states/" + stateFormatted + "/current.json"
-
-  $.ajax({
-      url: queryURL5day,
-      method: "GET"
-  }).then(function(response) {
-        console.log(response)
-        console.log(response.positiveIncrease);
-        console.log(response.positiveCasesViral);
-        console.log(response.hospitalizedCurrently);
-        console.log(response.death);
-        console.log(response.deathIncrease);
-     
-    
-    
-    
-    });
 
 
 
 
-
-};
-};
-
+  
 
 });
 
