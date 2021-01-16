@@ -16,7 +16,13 @@ var searchBtn = $("#button");
 
 searchBtn.on("click", function(event){
 
-
+    var citInput = $("#search").val();
+    var data = JSON.parse(localStorage.getItem("cities")) || [];
+    data.push(citInput);
+    localStorage.setItem("cities", JSON.stringify(data));
+    weatherData(citInput);
+    $("#search").val("");
+    
  
 function displayCity(){
     $("#cityList").empty();
@@ -38,15 +44,11 @@ for(var i = 0; i < data.length; i++){
 
 
 
-var citInput = $("#search").val();
-var data = JSON.parse(localStorage.getItem("cities")) || [];
-data.push(citInput);
-localStorage.setItem("cities", JSON.stringify(data));
-weatherData(citInput);
-$("#search").val("");
 
+
+  
 
 });
 
 /*var localS =localStorage.setItem();*/
-
+});
