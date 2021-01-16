@@ -1,8 +1,8 @@
 html,
 body {
-  text-align: center;
-  background-color: #cae4f9;
+  background-color: #a1a1a1;
   height: 100%;
+  margin: 0;
 }
 
 .container {
@@ -12,6 +12,29 @@ body {
   align-items: center;
 }
 
-header {
-  margin: 0 0 0 0;
+.head {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.hidden {
+  display: none;
+}
+
+.m {
+  margin-right: 20px;
+}
+
+.btn {
+  margin-top: 5px;
+}
+
+.col-md-4 {
+  margin: 0;
+}
+
+#wicon {
+  background-color: #a1a1a1;
+  margin-left: 30px;
+  margin-top: 10px;
 }

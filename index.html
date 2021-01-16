@@ -14,46 +14,76 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!--local style sheet-->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-<<<<<<< HEAD
-    <header>
-      <h3>Enter you Location</h3>
-     
-    </header>
-    <script src="script.js"></script>
-    
-=======
-    <div class="container">
-      <div class="row h-100 row align-items-center">
-        <div class="col">
-          <div class="input-group">
-            <input
-              id="search"
-              type="text"
-              class="form-control"
-              placeholder="Enter a city name..."
-            />
-            <button
-              class="btn btn-outline-secondary fas fa-search"
-              type="button"
-              id="button"
-            ></button>
+    <div class="container align-items-center" id="initial">
+      <div class="jumbotron flex-grow-0 flex-shrink-1">
+        <h1 class="display-4 text-center">Welcome to Location Hub!</h1>
+        <p class="lead text-center">
+          This is a simple website you can use to search for useful information
+          about cities!
+        </p>
+        <hr class="my-4" />
+        <p class="text-center">
+          Enter a city and state in the search boxes below to start!
+        </p>
+        <div class="container">
+          <div class="row h-100 row align-items-center">
+            <div class="col">
+              <div class="input-group">
+                <input
+                  id="search"
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter a city name..."
+                />
+              </div>
+              <input
+                id="search"
+                type="text"
+                class="form-control"
+                placeholder="Enter a state name..."
+              />
+              <button
+                class="btn btn-outline-secondary container-fluid fas fa-search btn-dark"
+                type="button"
+                id="button"
+              ></button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <!--practice list area-->
-    <div>
-        <ul class="cityList">
+    <!--Initial Search Bar and Button-->
 
-        </ul>
+    <div class="container hidden" id="widgets">
+      <div class="row">
+        <div class="jumbotron m">
+          <div class="col-md">
+            <h2>Weather</h2>
+            <div id="city"></div>
+            <div id="temp"></div>
+            <div id="humidity"></div>
+            <div id="wind"></div>
+            <div id="UV"></div>
+            <img id="wicon" class="place" src="" alt="Weather icon" />
+          </div>
+        </div>
+        <div class="jumbotron m"><div class="col-md">aaaaaaaaaaa</div></div>
+        <div class="jumbotron m"><div class="col-md">aaaaaaaaaaa</div></div>
+        <button
+          class="btn btn-outline-secondary container-fluid btn-light"
+          type="button"
+          id="reset"
+        >
+          Return to Location Hub
+        </button>
+      </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="weather.js"></script>
     <script src="script.js"></script>
->>>>>>> 53dcd91c32e9e346991483eaf987b474b308e056
   </body>
 </html>
