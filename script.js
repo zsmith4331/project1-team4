@@ -17,7 +17,7 @@ var searchBtn = $("#button");
 searchBtn.on("click", function(event){
 
     var citInput = $("#search").val();
-    var data = JSON.parse(localStorage.getItem("cities")) || [];
+    var data = JSON.parse(localStorage.getItem("cities", "states")) || [];
     data.push(citInput);
     localStorage.setItem("cities", JSON.stringify(data));
     weatherData(citInput);
