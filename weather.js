@@ -1,13 +1,14 @@
-$(document).ready(function () {
-  function citySearch() {
+
+  function citySearch(cityName) {
     $(".test").empty();
     $(".forecastCont").empty();
-    var input = $("#search").val();
+    //var input = $("#search").val();
     var weatherApi =
       "https://api.openweathermap.org/data/2.5/weather?q=" +
-      input +
+      cityName +
       "&appid=ab246c1d8eb84670d81cd395b2a799e9";
-
+      console.log("Weather Api" + weatherApi);
+      console.log("City name: "+ cityName);
     $.ajax({
       url: weatherApi,
       method: "GET",
@@ -30,8 +31,8 @@ $(document).ready(function () {
       $("#wicon").attr("src", iconUrl);
     });
   }
-  $(document).on("click", "#button", citySearch);
+  //$(document).on("click", "#button", citySearch);
   $("#reset").click(function () {
     location.reload();
   });
-});
+
