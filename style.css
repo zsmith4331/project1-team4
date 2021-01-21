@@ -69,3 +69,12 @@ h2 {
 .space {
   margin-top: 5px;
 }
+
+#clear{
+background-color: #a1a1a1;
+
+}
+
+#clear:hover {
+  background-color: red;
+}
