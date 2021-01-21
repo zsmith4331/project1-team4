@@ -40,7 +40,7 @@ searchBtn.on("click", function(event){
   for(var i = 0; i < data.length; i++){
     //var cityN = localStorage.getItem(i);
     var locName = $("#cityList").addClass("cityL");
-    locName.append("<button  class='cityPush' data-name='"+data[i]+"'>"+ data[i] + "</button>");
+    locName.append("<button  class='cityPush btn btn-outline-light btn-dark' data-name='"+data[i]+"'>"+ data[i] + "</button>");
 }
   }
 displayCity();
