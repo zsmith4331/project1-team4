@@ -1,8 +1,24 @@
-html,
+
 body {
-  background-color: #a1a1a1;
+  background-color: white;
   height: 100%;
   margin: 0;
+}
+
+.jumbotron{
+  background: rgb(193, 222, 231);
+}
+
+h1{
+  font-family: 'Lobster', cursive;}
+
+h2{
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-size: 38px;
+  margin-left: 50px;
+  margin-right: 50px;
+
 }
 
 .container {
@@ -70,11 +86,14 @@ h2 {
   margin-top: 5px;
 }
 
-#clear{
-background-color: #a1a1a1;
+#cityCon{
+  padding-left:150px;
+  padding-right:150px;
 
 }
 
-#clear:hover {
-  background-color: red;
+.cityPush{
+  width: 130px;
+  margin: 10px;
 }
+

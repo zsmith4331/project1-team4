@@ -14,6 +14,10 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+
     <!--local style sheet-->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -36,6 +40,7 @@
                   type="text"
                   class="form-control"
                   placeholder="Enter a city name..."
+                  style="margin-right: 15px; margin-left: 15px;"
                 />
               </div>
 
@@ -113,6 +118,7 @@
 
     <div class="container hidden" id="widgets">
       <div class="row">
+        <h1 style="margin-right:15%; margin-left:20%; font-size:80px;">Welcome to City, State</h1>
         <div class="jumbotron m">
           <div class="col-md">
             <h2>Weather</h2>
@@ -157,19 +163,30 @@
           </div>
         </div>
 
-        <button
-          class="btn btn-outline-secondary container-fluid btn-light"
-          type="button"
-          id="reset"
-        >
-          Return to Location Hub
-        </button>
-        <button id="clear">Clear Button:</button>
-        <div class="jumbotron container-fluid space">
-          <h2>Previously Searched Cities</h2>
-          <div id="cityList"></div>
-          
-        </div>
+            <div class="jumbotron m">
+
+              <button
+              class="btn btn-outline-secondary container-fluid btn-dark text-white"
+              type="button"
+              id="reset"
+              >
+              Return to Location Hub
+              </button>
+
+              <button
+              class="btn btn-outline-secondary container-fluid btn-dark text-white"
+              type="button"
+              id="clear"
+              >
+              Clear Button
+              </button>
+              <!-- <button id="clear">Clear Button:</button> -->
+
+              <div id="cityCon" class="jumbotron container-fluid space">
+                  <h2>Previously Searched Cities</h2>
+                  <div id="cityList"></div>
+              </div>
+            </div>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
