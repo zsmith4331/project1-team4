@@ -1,6 +1,19 @@
 // covid tracking
-function covidFill() {
-  var state = $("[id*='state'] :selected").data().value;
+function covidFill(covid, p){
+  var ton = true;
+console.log("covid: " + covid);
+  var state = "";
+
+if ( p === false){
+  ton = p;
+}
+  if( ton){
+
+    state = $("[id*='state'] :selected").data().value;
+  }else {
+    state = covid;
+  }
+
   console.log(state);
   var stateFormatted = state.replaceAll(" ", "").toLowerCase();
   var queryURL5day =

@@ -10,15 +10,25 @@ $(".saveBtn").on("click", saveEvent);
 var search = $("#search");
 var searchBtn = $("#button");
 
-searchBtn.on("click", function (event) {
-  var citInput = $("#search").val();
-  var data = JSON.parse(localStorage.getItem("cities", "states")) || [];
-  data.push(citInput);
-  localStorage.setItem("cities", JSON.stringify(data));
-  console.log(citInput);
-  citySearch(citInput);
-  var state = $("[id*='state'] :selected").data().value;
-  $("#welcomeTo").text("Welcome to " + citInput + ", " + state);
+searchBtn.on("click", function(event){
+
+    var stateSel = $("[id*='state'] :selected").data().value;
+    var citInput = $("#search").val();
+    var sVal =[];
+    sVal.push(citInput);
+    sVal.push(stateSel);
+    var data = JSON.parse(localStorage.getItem("cities")) || [];
+    data.push(sVal);
+    localStorage.setItem("cities",  JSON.stringify(data));
+    console.log( "This is citInput: "+ citInput);
+    console.log("this is sVal " + sVal);
+    console.log("This is stateSel: " + stateSel);
+    citySearch(citInput);
+    geosearch(citInput);
+    var welcomeState= $("[id*='state'] :selected").data().value;
+$("#welcomeS").append(welcomeState);
+ $("#welcomeC").append(search.val());
+
 });
 
 function displayCity() {
@@ -29,23 +39,38 @@ function displayCity() {
 
   //var cityN = localStorage.getItem(i);
 
-  for (var i = 0; i < data.length; i++) {
+
+  
+
+
+
+  for(var i = 0; i < data.length; i++){
     //var cityN = localStorage.getItem(i);
     var locName = $("#cityList").addClass("cityL");
-    locName.append(
-      "<button  class='cityPush btn btn-outline-light btn-dark' data-name='" +
-        data[i] +
-        "'>" +
-        data[i] +
-        "</button>"
-    );
+    console.log("data  [0]" + data[i][0] );
+    console.log("data  [1]" + data[i][1]);
+    console.log("LocName: " + locName);
+   locName.append("<button  class='cityPush btn btn-outline-light btn-dark' data-name='"+data[i][0]+"'data-state='"+ data[i][1] + "'>"+ data[i] + "</button>");
   }
 }
+
+
 displayCity();
 
-$(".cityPush").on("click", function () {
-  var c = $(this).attr("data-name");
-  citySearch(c);
+// State button
+function displayState(){
+
+
+}
+
+
+$(".cityPush").on("click", function(){
+var c = $(this).attr("data-name");
+var s = $(this).attr("data-state");
+var p = false;
+citySearch(c);
+geosearch(c);
+covidFill(s,p);
 });
 
 $("#clear").on("click", function () {

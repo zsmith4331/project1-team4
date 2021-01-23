@@ -1,8 +1,8 @@
-$(document).ready(function () {
-   function geosearch() {
-      var cityName = $("#search").val();
+
+   function geosearch(citInput) {
+      //var cityName = $("#search").val();
       var weatherAPIKey = "&appid=ab246c1d8eb84670d81cd395b2a799e9";
-      var weatherQueryURL = "https://api.openweathermap.org/data/2.5/weather?q="+ cityName + weatherAPIKey;
+      var weatherQueryURL = "https://api.openweathermap.org/data/2.5/weather?q="+ citInput + weatherAPIKey;
 
       $.ajax({
          url: weatherQueryURL,
@@ -82,9 +82,8 @@ $(document).ready(function () {
    });
 }
 
-   $(document).on("click", "#button", geosearch);
+   //$(document).on("click", "#button", geosearch);
    $("#reset").click(function () {
      location.reload();
    });
 
-});
