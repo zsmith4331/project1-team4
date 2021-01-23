@@ -28,7 +28,8 @@ searchBtn.on("click", function(event){
     var welcomeState= $("[id*='state'] :selected").data().value;
 $("#welcomeS").append(welcomeState);
  $("#welcomeC").append(search.val());
-
+console.log("welcome state: "+ welcomeState);
+console.log("search val: "+ search.val());
 });
 
 function displayCity() {
@@ -65,12 +66,17 @@ function displayState(){
 
 
 $(".cityPush").on("click", function(){
+
 var c = $(this).attr("data-name");
 var s = $(this).attr("data-state");
 var p = false;
 citySearch(c);
 geosearch(c);
 covidFill(s,p);
+$("#welcomeS").text(s);
+$("#welcomeC").text(c);
+
+
 });
 
 $("#clear").on("click", function () {
