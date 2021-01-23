@@ -1,19 +1,18 @@
 $(document).ready(function () {
    function geosearch() {
       var cityName = $("#search").val();
-      var geolocationsAPIKey = "96fbed43a1c4b047c10ea2d52da6f1ad";
-      var geolocationsQueryURL = "http://api.positionstack.com/v1/forward" + "?access_key=" + geolocationsAPIKey +
-    "&query=" + cityName;
+      var weatherAPIKey = "&appid=ab246c1d8eb84670d81cd395b2a799e9";
+      var weatherQueryURL = "https://api.openweathermap.org/data/2.5/weather?q="+ cityName + weatherAPIKey;
 
       $.ajax({
-         url: geolocationsQueryURL,
+         url: weatherQueryURL,
          method: "GET",
-       }).then(function(data) {
-          console.log(data)
-         var lat = data.data[0].latitude
-         console.log(lat)
-         var long = data.data[0].longitude
-         console.log(long)
+       }).then(function(response) {
+          console.log(response);
+         var lat = response.coord.lat;
+         console.log(lat);
+         var long = response.coord.lon;
+         console.log(long);
 
           // Zomato API Key
          var ZomatoAPIKey = "78381c34c15580968a80a67951c301b7";
