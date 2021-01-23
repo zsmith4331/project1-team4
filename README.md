@@ -28,9 +28,12 @@ If you want to do a search again and/or got back to home screen:
 
 ## Contributors
 ### Name:Github/Email
-Kate Milano: katemilano/catherine.ann.milano@gmail.com
+Kate Milano: katemilano/ catherine.ann.milano@gmail.com
+
 Zach Smith: zsmith4331/ zsmith4331@gmail.com
+
 Matthew Randolph: RobeandHat / mttrndlph@gmail.com
+
 Jack Funck: Jfunck1990/ jackfunck21@gmail.com
 
 ### Thanks
