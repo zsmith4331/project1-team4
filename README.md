@@ -16,10 +16,10 @@ How to:
 
 <img src="Img/lhhname.png">
 
+<img src="Img/lh city stats.png">
 -> If there are too many previous search buttons or want to clear:
 1. click the "Clear Searched Cities" button.
 
-<img src="Img/lh city stats.png">
 
 ->If you want to do a search again and/or got back to home screen:
 1. Click the "Return to Location Hub" button.
