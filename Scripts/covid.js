@@ -1,16 +1,15 @@
 // covid tracking
-function covidFill(covid, p){
+function covidFill(covid, p) {
   var ton = true;
-console.log("covid: " + covid);
+  console.log("covid: " + covid);
   var state = "";
 
-if ( p === false){
-  ton = p;
-}
-  if( ton){
-
+  if (p === false) {
+    ton = p;
+  }
+  if (ton) {
     state = $("[id*='state'] :selected").data().value;
-  }else {
+  } else {
     state = covid;
   }
 
