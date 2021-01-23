@@ -10,14 +10,19 @@ How to:
 3. Click the search button.
 4. Your desired stat's should pop up from Weather on the left, The states Covid stats on the right, and three local restaurant's at the bottom.
 
-> If you are curious about past searches on the bottom container of the site:
+-> If you are curious about past searches on the bottom container of the site:
 1. click desired city/state.
 2. stats for that city/state should pop-up.
 
-> If there are too many previous search buttons or want to clear:
+<img src="Img/lhhname.png">
+
+-> If there are too many previous search buttons or want to clear:
 1. click the "Clear Searched Cities" button.
 
->If you want to do a search again and/or got back to home screen:
+<img src="Img/lh city stats.png">
+
+->If you want to do a search again and/or got back to home screen:
 1. Click the "Return to Location Hub" button.
 
+<img src="Img/lhbuttons.png">
 
