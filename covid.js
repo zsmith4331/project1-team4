@@ -1,7 +1,19 @@
 // covid tracking
-function covidFill(){
+function covidFill(covid, p){
+  var ton = true;
+console.log("covid: " + covid);
+  var state = "";
 
-  var state = $("[id*='state'] :selected").data().value;
+if ( p === false){
+  ton = p;
+}
+  if( ton){
+
+    state = $("[id*='state'] :selected").data().value;
+  }else {
+    state = covid;
+  }
+
   console.log(state);
   var stateFormatted = state.replaceAll(" ", "").toLowerCase();
   var queryURL5day = "https://api.covidtracking.com/v1/states/" + stateFormatted + "/current.json"

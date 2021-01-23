@@ -1,9 +1,11 @@
-$(document).ready(function () {
-   function geosearch() {
-      var cityName = $("#search").val();
+
+   function geosearch(cityName) {
+      //var cityName = $("#search").val();
       var geolocationsAPIKey = "96fbed43a1c4b047c10ea2d52da6f1ad";
       var geolocationsQueryURL = "http://api.positionstack.com/v1/forward" + "?access_key=" + geolocationsAPIKey +
     "&query=" + cityName;
+    
+    console.log("geosearch: "+ cityName);
 
       $.ajax({
          url: geolocationsQueryURL,
@@ -83,9 +85,8 @@ $(document).ready(function () {
    });
 }
 
-   $(document).on("click", "#button", geosearch);
+   //$(document).on("click", "#button", geosearch);
    $("#reset").click(function () {
      location.reload();
    });
 
-});
