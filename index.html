@@ -15,14 +15,17 @@
       crossorigin="anonymous"
     />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Oswald:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
     <!--local style sheet-->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container align-items-center" id="initial">
+    <div class="container" id="initial">
       <div class="jumbotron flex-grow-0 flex-shrink-1">
         <h1 class="display-4 text-center">Welcome to Location Hub!</h1>
         <p class="lead text-center">
@@ -40,7 +43,7 @@
                   type="text"
                   class="form-control"
                   placeholder="Enter a city name..."
-                  style="margin-right: 15px; margin-left: 15px;"
+                  style="margin-right: 15px; margin-left: 15px"
                 />
               </div>
 
@@ -117,76 +120,84 @@
     <!--Initial Search Bar and Button-->
 
     <div class="container hidden" id="widgets">
-      <div class="row">
-        <h1 style="margin-right:15%; margin-left:20%; font-size:80px;">Welcome to City, State</h1>
-        <div class="jumbotron m">
-          <div class="col-md">
-            <h2>Weather</h2>
-            <div id="city"></div>
-            <div id="temp"></div>
-            <div id="humidity"></div>
-            <div id="wind"></div>
-            <div id="UV"></div>
-            <img id="wicon" class="place" src="" alt="Weather icon" />
-          </div>
-        </div>
-        <div class="jumbotron m">
-          <div class="col-md">
-            <h2>Covid Update</h2>
-            <div id="posIncr">aaaaaa</div>
-            <div id="posCase">aaaa</div>
-            <div id="hos">aaa</div>
-            <div id="death">aaaa</div>
-            <div id="deathInc">aaa</div>
-            <img id="cicon" class="place" src="" alt="Covid icon" />
-          </div>
-        </div>
-        <div class="jumbotron m">
-          <div class="col-md">
-            <h2>Restaurants</h2>
-            
-            <div id="rest1Name"></div>
-            <div id="rest1Cuisine"></div>
-            <div id="rest1Rating"></div>
-            <a href="" id="rest1Menu"></a>
-
-            <div id="rest2Name"></div>
-            <div id="rest2Cuisine"></div>
-            <div id="rest2Rating"></div>
-            <a href="" id="rest2Menu"></a>
-
-            <div id="rest3Name"></div>
-            <div id="rest3Cuisine"></div>
-            <div id="rest3Rating"></div>
-            <a href="" id="rest3Menu"></a>
+ 
+        
+          <h2
+            id="welcomeTo"
+            style="font-size: 70px; text-align: center;"
+          ></h2>
+         <div class = "row">
+            <div class="col-md text-center">
+              <h2>Weather</h2>
+              <div id="city"></div>
+              <div id="temp"></div>
+              <div id="humidity"></div>
+              <div id="wind"></div>
+              <div id="UV"></div>
+              <img id="wicon" class="place" src="" alt="Weather icon" />
+            </div>
+         
+         
+            <div class="col-md text-center">
+              <h2>Covid Update</h2>
+              <div id="posIncr">aaaaaa</div>
+              <div id="posCase">aaaa</div>
+              <div id="hos">aaa</div>
+              <div id="death">aaaa</div>
+              <div id="deathInc">aaa</div>
+              <img id="cicon" class="place" src="" alt="Covid icon" />
+            </div>
           
+         
+            <div class="col-md text-center">
+              <h2>Restaurants</h2>
+
+              <div id="rest1Name"></div>
+              <div id="rest1Cuisine"></div>
+              <div id="rest1Rating"></div>
+              <a href="" id="rest1Menu"></a>
+              <hr>
+
+              <div id="rest2Name"></div>
+              <div id="rest2Cuisine"></div>
+              <div id="rest2Rating"></div>
+              <a href="" id="rest2Menu"></a>
+              <hr>
+
+              <div id="rest3Name"></div>
+              <div id="rest3Cuisine"></div>
+              <div id="rest3Rating"></div>
+              <a href="" id="rest3Menu"></a>
+            
           </div>
         </div>
-
-            <div class="jumbotron m">
-
+          <div class= "row">
+            <div class="col-md">
+            <div class="jumbotron flex-grow-0 flex-shrink-1">
               <button
-              class="btn btn-outline-secondary container-fluid btn-dark text-white"
-              type="button"
-              id="reset"
+                class="btn btn-outline-secondary container-fluid btn-dark text-white"
+                type="button"
+                id="reset"
               >
-              Return to Location Hub
+                Return to Location Hub
               </button>
 
               <button
-              class="btn btn-outline-secondary container-fluid btn-dark text-white"
-              type="button"
-              id="clear"
+                class="btn btn-outline-secondary container-fluid btn-dark text-white"
+                type="button"
+                id="clear"
               >
-              Clear Button
+                Clear Searched Cities
               </button>
               <!-- <button id="clear">Clear Button:</button> -->
 
               <div id="cityCon" class="jumbotron container-fluid space">
-                  <h2>Previously Searched Cities</h2>
-                  <div id="cityList"></div>
+                <h2>Previously Searched Cities</h2>
+                <div class="text-center" id="cityList"></div>
               </div>
             </div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -194,6 +205,6 @@
     <script src="covid.js"></script>
     <script src="zomato.js"></script>
     <script src="script.js"></script>
-
   </body>
 </html>
+
