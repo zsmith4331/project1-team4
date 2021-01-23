@@ -1,5 +1,4 @@
-
-// save button function to local storage 
+// save button function to local storage
 /*function saveEvent (event){
     var userInput = $(this).siblings("input").val().trim();
     localStorage.setItem(userInput);
@@ -7,8 +6,6 @@
 $(".saveBtn").on("click", saveEvent);
 */
 // Lists the cities, state, and/or zipcode from local storage.
-
-
 
 var search = $("#search");
 var searchBtn = $("#button");
@@ -34,14 +31,16 @@ $("#welcomeS").append(welcomeState);
 
 });
 
+function displayCity() {
+  $("#cityList").empty();
+  var data = JSON.parse(localStorage.getItem("cities")) || [];
+
+  //pulling and listing city name
+
+  //var cityN = localStorage.getItem(i);
 
 
-
-
-  function displayCity(){
-    $("#cityList").empty();
-    var data = JSON.parse(localStorage.getItem("cities")) || [];
-    
+  
 
 
 
@@ -50,9 +49,12 @@ $("#welcomeS").append(welcomeState);
     var locName = $("#cityList").addClass("cityL");
     console.log("data  [0]" + data[i][0] );
     console.log("data  [1]" + data[i][1]);
+    console.log("LocName: " + locName);
    locName.append("<button  class='cityPush btn btn-outline-light btn-dark' data-name='"+data[i][0]+"'data-state='"+ data[i][1] + "'>"+ data[i] + "</button>");
-}
   }
+}
+
+
 displayCity();
 
 // State button
@@ -71,12 +73,7 @@ geosearch(c);
 covidFill(s,p);
 });
 
-$("#clear").on("click", function(){
-$("#cityList").empty();
-localStorage.clear();
-
+$("#clear").on("click", function () {
+  $("#cityList").empty();
+  localStorage.clear();
 });
-
-
-
-
